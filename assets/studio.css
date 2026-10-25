@@ -1,0 +1,26 @@
+:root{--studio-ink:#141414;--studio-muted:#60656b;--studio-blue:#1d5fbf;}
+html,body,[data-testid="stApp"],input,button,textarea,[data-baseweb="select"],p,h1,h2,h3,h4,li{
+font-family:Geist,system-ui,sans-serif!important;font-variant-numeric:tabular-nums;}
+[data-testid="stMainBlockContainer"]{padding:1.7rem 2rem 2rem;max-width:1700px;}
+[data-testid="stSidebar"]{background:#f4f5f6;}
+[data-testid="stSidebar"] [data-testid="stSidebarContent"]{padding-top:1rem;}
+h1{font-size:24px!important;font-weight:500!important;line-height:1.25!important;padding-top:0!important;}
+h2{font-size:18px!important;font-weight:500!important;}h3{font-size:16px!important;font-weight:500!important;}
+p,label{font-size:14px!important;}[data-testid="stCaptionContainer"] p{font-size:12px!important;color:#60656b;overflow-wrap:anywhere;}
+[data-testid="stVerticalBlock"]{gap:0.7rem;}
+button{box-shadow:none!important;min-height:36px;}
+button[kind="primary"]{background:#141414!important;border-color:#141414!important;color:white!important;}
+[data-testid="stMetricValue"]{font-size:24px;font-weight:400;}
+[data-testid="stDataFrame"]{font-variant-numeric:tabular-nums;}
+[data-testid="stHeader"]{background:transparent;}
+.studio-mark{display:flex;gap:10px;align-items:center;margin-bottom:8px;font-size:16px;font-weight:500;}
+.studio-mark svg{flex:none;}
+/* Label bands / edit boundaries are decoration, never mouse targets. Keep the
+   Plotly drag layer and trace hover handlers active underneath them. */
+[data-testid="stPlotlyChart"] .shapelayer path,
+[data-testid="stPlotlyChart"] .shapelayer .shape-label{pointer-events:none!important;}
+@media(max-width:768px){
+[data-testid="stMainBlockContainer"]{padding:1rem;}
+.st-key-workbench > [data-testid="stVerticalBlock"] > [data-testid="stHorizontalBlock"]{flex-direction:column-reverse;}
+button{min-height:44px;}
+}
